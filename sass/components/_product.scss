@@ -1,0 +1,38 @@
+.product {
+  @include mq(tablet-only) {
+    display: flex;
+    flex-direction: column;
+
+    width: 354px;
+  }
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .product__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &:hover .overlay,
+  &:focus .overlay {
+    transform: translateY(0);
+  }
+
+  .product__img {
+    width: 450px;
+    @include mq(tablet) {
+      width: 354px;
+    }
+    @include mq(desktop) {
+      width: 370px;
+    }
+  }
+
+  .works__item &:hover,
+  .works__item &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+@import "./overlay";
+@import "./item-content";

@@ -1,0 +1,28 @@
+@import "./reset";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color-text);
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.current {
+  color: var(--acent-color-text);
+}

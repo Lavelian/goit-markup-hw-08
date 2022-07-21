@@ -1,0 +1,39 @@
+.menu-btn {
+  @include mq(tablet) {
+    display: none;
+  }
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    &-open {
+      opacity: 1;
+
+      transition: opacity 450ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 250ms cubic-bezier;
+    }
+    .menu-btn.is-active &-open {
+      opacity: 0;
+    }
+
+    &-close {
+      opacity: 0;
+
+      transition: opacity 450ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 450ms cubic-bezier;
+    }
+
+    .menu-btn.is-active &-close {
+      opacity: 1;
+    }
+  }
+}

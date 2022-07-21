@@ -1,0 +1,25 @@
+.item-content {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  flex-grow: 1;
+}
+
+.item-content__title {
+  color: var(--secondary-color-text);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  /* identical to box height, or 200% */
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.item-content__text {
+  letter-spacing: 0.06em;
+  font-size: 16px;
+  line-height: 1.87;
+
+  /* identical to box height, or 187% */
+}

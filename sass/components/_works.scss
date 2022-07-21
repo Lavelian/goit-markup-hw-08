@@ -1,0 +1,25 @@
+.works {
+  display: block;
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.works__item {
+  @include mq(tablet) {
+    display: flex;
+  }
+}
+
+.works__item:not(:last-child) {
+  @include mq(mobile-only) {
+    margin-bottom: 30px;
+  }
+}
+.works__item .product:hover,
+.works__item .product:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}

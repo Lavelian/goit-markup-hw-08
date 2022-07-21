@@ -1,0 +1,65 @@
+.teams {
+  background-color: #f5f4fa;
+}
+
+.teams__title {
+  @include mq(mobile-only) {
+    width: 450px;
+  }
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--secondary-color-text);
+  @include mq(tablet) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.teams__list {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.teams__item {
+  // @include mq(mobile-only) {
+  //   width: 450px;
+  // }
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+@include mq(mobile-only) {
+  .teams__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.team__card {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.teams__uppertitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  /* identical to box height */
+  color: var(--secondary-color-text);
+  margin-bottom: 10px;
+}
+
+.teams__text {
+  font-size: 16px;
+  line-height: 1.18;
+  /* identical to box height */
+}
+
+@import "./socials";
